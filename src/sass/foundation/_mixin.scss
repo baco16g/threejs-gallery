@@ -1,0 +1,14 @@
+
+
+//media query
+@mixin media-pc {
+	@media only screen and (min-width: $media-pc ) {
+		@content;
+	}
+}
+
+@mixin media-sp {
+	@media only screen and (max-width: $media-sp) {
+		@content;
+	}
+}

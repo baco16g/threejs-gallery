@@ -1,0 +1,21 @@
+extends /pug/layouts/_rootLayout
+
+block var
+	- var page = data.data.pages.digitalText // 末尾のプロパティ名のみ変更する
+
+block title
+	title= page.title
+
+block append main
+	div#output-webgl.p-output-webgl
+	div#output-stats
+
+block append script
+	script(data-src="./assets/glsl/"+page.path+"/digitalText.vert" charset="utf-8" data-name="dtShader" type="x-shader/x-vertex")
+	script(data-src="./assets/glsl/"+page.path+"/digitalText.frag" charset="utf-8"  data-name="dtShader" type="x-shader/x-fragment")
+	script(data-src="./assets/glsl/"+page.path+"/fireball.vert" charset="utf-8" data-name="fbShader" type="x-shader/x-vertex")
+	script(data-src="./assets/glsl/"+page.path+"/fireball.frag" charset="utf-8"  data-name="fbShader" type="x-shader/x-fragment")
+	script(data-src="./assets/glsl/"+page.path+"/env.vert" charset="utf-8" data-name="enShader" type="x-shader/x-vertex")
+	script(data-src="./assets/glsl/"+page.path+"/env.frag" charset="utf-8"  data-name="enShader" type="x-shader/x-fragment")
+	script(src="./assets/js/pages/digitalText.js")
+	script(src="./assets/js/util.js")

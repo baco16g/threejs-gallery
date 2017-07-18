@@ -1,0 +1,10 @@
+extends /pug/layouts/_rootLayout
+
+block var
+	- var page = data.data.pages.home;
+
+block title
+	title= page.title
+
+block append main
+	include /pug/layouts/_header

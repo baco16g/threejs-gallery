@@ -1,0 +1,66 @@
+{
+	"meta": {
+		"domain": "",
+		"website_name": "",
+		"keywords": "",
+		"repository_name": ""
+	},
+	"pages": {
+		"home": {
+			"title": "home",
+			"keywords": "",
+			"description": "",
+			"path": "",
+			"ogp_description": "",
+			"ogp_img": ""
+		},
+		"sample": {
+			"title": "sample_sketch",
+			"keywords": "",
+			"description": "",
+			"path": "sample",
+			"ogp_description": "",
+			"ogp_img": ""
+		},
+		"fireball": {
+			"title": "fireball_sketch",
+			"keywords": "",
+			"description": "",
+			"path": "fireball",
+			"ogp_description": "",
+			"ogp_img": ""
+		},
+		"raysample": {
+			"title": "raysample_sketch",
+			"keywords": "",
+			"description": "",
+			"path": "raysample",
+			"ogp_description": "",
+			"ogp_img": ""
+		},
+		"digitalText": {
+			"title": "digitalText_sketch",
+			"keywords": "",
+			"description": "",
+			"path": "digitalText",
+			"ogp_description": "",
+			"ogp_img": ""
+		},
+		"morphing": {
+			"title": "morphing_sketch",
+			"keywords": "",
+			"description": "",
+			"path": "morphing",
+			"ogp_description": "",
+			"ogp_img": ""
+		},
+		"postprocess": {
+			"title": "postprocess_sketch",
+			"keywords": "",
+			"description": "",
+			"path": "postprocess",
+			"ogp_description": "",
+			"ogp_img": ""
+		}
+	}
+}

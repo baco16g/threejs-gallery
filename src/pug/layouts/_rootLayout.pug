@@ -1,0 +1,23 @@
+doctype html
+block var
+html(lang="ja")
+	head
+		meta(charset='UTF-8')
+		block css
+			link(rel="stylesheet" href="./assets/css/common.css")
+		block title
+		block meta
+			meta(name="viewport" content="width=device-width,initial-scale=1")
+			meta(name='description', content=description)
+			meta(name='keywords', content=keywords)
+			meta(name='robots', content=robots)
+	body
+		block body
+			.l-wrapper
+				main(role="main")
+					.l-main
+						block main
+
+		block script
+			script(src="./assets/js/vendor.js")
+			script(src="./assets/js/lib.js")
