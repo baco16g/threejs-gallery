@@ -85,7 +85,7 @@ class PostProcessApp {
 		// ◆ obj
 		//-------------------------------------------------------------------
 		{
-			this.bg = new Background(vsbg, fsbg, './assets/images/postprocess/texture.png');
+			this.bg = new Background(vsbg, fsbg, './assets/images/postprocess/cat02.jpg');
 			this.pp = new Postprocess(vspp, fspp, this.renderbg.texture);
 			this.bg.init();
 			this.pp.init();

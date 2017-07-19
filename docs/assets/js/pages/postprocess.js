@@ -371,7 +371,7 @@ var PostProcessApp = function () {
 			// ◆ obj
 			//-------------------------------------------------------------------
 			{
-				this.bg = new _background2.default(vsbg, fsbg, './assets/images/postprocess/texture.png');
+				this.bg = new _background2.default(vsbg, fsbg, './assets/images/postprocess/cat02.jpg');
 				this.pp = new _postprocess2.default(vspp, fspp, this.renderbg.texture);
 				this.bg.init();
 				this.pp.init();

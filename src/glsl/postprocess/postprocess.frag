@@ -10,9 +10,6 @@ varying vec2 vTexCoord;
 #pragma glslify: snoise3 = require(glsl-noise/simplex/3d)
 #pragma glslify: random = require("glsl-random");
 
-
-const float interval = 3.0;
-
 void main(void){
 
 	// テクスチャから座標情報を取得
@@ -21,8 +18,8 @@ void main(void){
 	vec2 uv = vUv;
 
 	// UV座標を再計算し、画面を歪ませる
-	 float vignet = length(uv);
-	 uv /= 1.0 - vignet * 0.2;
+	// float vignet = length(uv);
+	// uv /= 1.0 - vignet * 0.2;
 
 	// colorの初期化
 	vec3 color = vec3(0, 0, 0);
@@ -33,9 +30,9 @@ void main(void){
 	color.b = texture2D(texture, uv - vec2(0.004, 0)).b;
 
 	// RGBノイズ
-	color.r = random(uv + vec2(123.0 + time, 0.0));
-	color.g = random(uv + vec2(123.0 + time, 1.0));
-	color.b = random(uv + vec2(123.0 + time, 2.0));
+	color.r += random(uv + vec2(123.0 + time, 0.0));
+	color.g += random(uv + vec2(123.0 + time, 1.0));
+	color.b += random(uv + vec2(123.0 + time, 2.0));
 
 	// ピクセルごとに描画するRGBを決める
 	float floorX = mod(uv.x * resolution.x / 3.0, 1.0);
