@@ -63,11 +63,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -167,7 +168,8 @@ var Background = function () {
 exports.default = Background;
 
 /***/ }),
-/* 1 */
+
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -257,10 +259,8 @@ var PostProcess = function () {
 exports.default = PostProcess;
 
 /***/ }),
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */
+
+/***/ 8:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -271,11 +271,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 /*global dat b:true*/
 /*global SHADER_LOADER b:true*/
 
-var _background = __webpack_require__(0);
+var _background = __webpack_require__(2);
 
 var _background2 = _interopRequireDefault(_background);
 
-var _postprocess = __webpack_require__(1);
+var _postprocess = __webpack_require__(3);
 
 var _postprocess2 = _interopRequireDefault(_postprocess);
 
@@ -460,4 +460,5 @@ var PostProcessApp = function () {
 })();
 
 /***/ })
-/******/ ]);
+
+/******/ });

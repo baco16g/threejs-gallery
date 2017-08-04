@@ -108,6 +108,13 @@ function glsl() {
 		.pipe(reload({ stream: true }));
 }
 
+// copy
+function video() {
+	return gulp.src(config.tasks.video.src)
+		.pipe(gulp.dest(config.tasks.video.dest))
+		.pipe(reload({ stream: true }));
+}
+
 // Build folder delete
 function clean(cb) {
 	return del([config.dirs.dest]).then(() => cb());
@@ -139,13 +146,14 @@ gulp.task('watch', (done) => {
 	gulp.watch(config.tasks.watch.util, gulp.series(util));
 	gulp.watch(config.tasks.watch.lib, gulp.series(lib));
 	gulp.watch(config.tasks.watch.glsl, gulp.series(glsl));
+	gulp.watch(config.tasks.watch.video, gulp.series(video));
 	done();
 });
 
 // Default Build
 gulp.task('build', gulp.series(
 	clean,
-	gulp.parallel(pug, sass, babel, vendor, util, lib, glsl, images),
+	gulp.parallel(pug, sass, babel, vendor, util, lib, glsl, images, video),
 	bs,
 ));
 

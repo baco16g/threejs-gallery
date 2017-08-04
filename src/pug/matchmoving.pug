@@ -1,0 +1,20 @@
+extends /pug/layouts/_rootLayout
+
+block var
+	- var page = data.data.pages.matchmoving // 末尾のプロパティ名のみ変更する
+
+block title
+	title= page.title
+
+block append main
+	div#output-webgl.p-output-webgl
+		video(id="video" src="./assets/video/"+page.path+"/video.mp4")
+	div#output-stats
+
+block append script
+	script(data-src="./assets/glsl/"+page.path+"/background.vert" charset="utf-8" data-name="background" type="x-shader/x-vertex")
+	script(data-src="./assets/glsl/"+page.path+"/background.frag" charset="utf-8"  data-name="background" type="x-shader/x-fragment")
+	script(data-src="./assets/glsl/"+page.path+"/postprocess.vert" charset="utf-8" data-name="postprocess" type="x-shader/x-vertex")
+	script(data-src="./assets/glsl/"+page.path+"/postprocess.frag" charset="utf-8"  data-name="postprocess" type="x-shader/x-fragment")
+	script(src="./assets/js/pages/matchmoving.js")
+	script(src="./assets/js/util.js")
