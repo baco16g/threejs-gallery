@@ -20,7 +20,7 @@ class Morphing {
 			const vs = data.myShader.vertex; // `myShader`はdata-nameに合わせる
 			const fs = data.myShader.fragment;
 
-			this.loader.load('./assets/images/morphing/texture.png', texture => {
+			this.loader.load('./assets/images/morphing/water-texture.jpg', texture => {
 				this.init(vs, fs, texture);
 			});
 		});

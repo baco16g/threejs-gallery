@@ -105,7 +105,7 @@ var Morphing = function () {
 			var vs = data.myShader.vertex; // `myShader`はdata-nameに合わせる
 			var fs = data.myShader.fragment;
 
-			_this.loader.load('./assets/images/morphing/texture.png', function (texture) {
+			_this.loader.load('./assets/images/morphing/water-texture.jpg', function (texture) {
 				_this.init(vs, fs, texture);
 			});
 		});
