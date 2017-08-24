@@ -20,7 +20,7 @@ class Morphing {
 			const vs = data.myShader.vertex; // `myShader`はdata-nameに合わせる
 			const fs = data.myShader.fragment;
 
-			this.loader.load('./assets/images/morphing/water-texture.jpg', texture => {
+			this.loader.load('./assets/images/morphing/flower.png', texture => {
 				this.init(vs, fs, texture);
 			});
 		});
@@ -131,6 +131,7 @@ class Morphing {
 		//-------------------------------------------------------------------
 		{
 			const planeGeometry = new THREE.PlaneGeometry(300, 300, 20, 32);
+			// const planeGeometry = new THREE.SphereGeometry(100, 100, 20);
 			const planeMaterial = new THREE.ShaderMaterial({
 				fragmentShader: fs,
 				vertexShader: vs,
