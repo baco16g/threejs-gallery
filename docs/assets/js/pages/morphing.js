@@ -63,12 +63,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 4:
+/***/ 7:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -105,7 +105,7 @@ var Morphing = function () {
 			var vs = data.myShader.vertex; // `myShader`はdata-nameに合わせる
 			var fs = data.myShader.fragment;
 
-			_this.loader.load('./assets/images/morphing/texture.png', function (texture) {
+			_this.loader.load('./assets/images/morphing/flower.png', function (texture) {
 				_this.init(vs, fs, texture);
 			});
 		});
@@ -221,6 +221,7 @@ var Morphing = function () {
 			//-------------------------------------------------------------------
 			{
 				var planeGeometry = new THREE.PlaneGeometry(300, 300, 20, 32);
+				// const planeGeometry = new THREE.SphereGeometry(100, 100, 20);
 				var planeMaterial = new THREE.ShaderMaterial({
 					fragmentShader: fs,
 					vertexShader: vs,

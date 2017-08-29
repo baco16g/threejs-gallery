@@ -62,6 +62,10 @@ const tasks = {
 		src: `${config.dirs.src}/images/**/*.{png,jpg,gif,svg,ico}`,
 		dest: `${config.dirs.dest}/assets/images`,
 	},
+	video: {
+		src: `${config.dirs.src}/video/**/*.{mp4,webm}`,
+		dest: `${config.dirs.dest}/assets/video`,
+	},
 	watch: {
 		pug: [`${config.dirs.src}/pug/**/*.pug`],
 		sass: [`${config.dirs.src}/sass/**/*.scss`],

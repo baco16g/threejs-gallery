@@ -9,6 +9,7 @@ export default {
 		"pages/fireball": `${config.dirs.src}/js/pages/fireball/index.js`,
 		"pages/morphing": `${config.dirs.src}/js/pages/morphing/index.js`,
 		"pages/postprocess": `${config.dirs.src}/js/pages/postprocess/index.js`,
+		"pages/matchmoving": `${config.dirs.src}/js/pages/matchmoving/index.js`,
 	},
 	output: {
 		path: path.join(__dirname, config.tasks.babel.dest),
