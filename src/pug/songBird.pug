@@ -1,0 +1,17 @@
+extends /pug/layouts/_rootLayout
+
+block var
+	- var page = data.data.pages.songBird // 末尾のプロパティ名のみ変更する
+
+block title
+	title= page.title
+
+block append main
+	div#output-webgl.p-output-webgl
+	div#output-stats
+
+block append script
+	script(data-src="./assets/glsl/"+page.path+"/songBird.vert" charset="utf-8" data-name="dtShader" type="x-shader/x-vertex")
+	script(data-src="./assets/glsl/"+page.path+"/songBird.frag" charset="utf-8"  data-name="dtShader" type="x-shader/x-fragment")
+	script(src="./assets/js/pages/songBird.js")
+	script(src="./assets/js/util.js")

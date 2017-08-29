@@ -61,6 +61,14 @@
 			"path": "postprocess",
 			"ogp_description": "",
 			"ogp_img": ""
+		},
+		"songBird": {
+			"title": "songBird_sketch",
+			"keywords": "",
+			"description": "",
+			"path": "songBird",
+			"ogp_description": "",
+			"ogp_img": ""
 		}
 	}
 }
